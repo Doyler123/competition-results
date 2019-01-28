@@ -8,9 +8,11 @@
     if(isset($_FILES['prize-breakdown'])){
         $uploads_dir = $_SERVER['DOCUMENT_ROOT'] . '/images/Luttrellstown/Competitions/2018';
         $name = $_FILES["prize-breakdown"]["name"];
-        $filename = $uploads_dir . '/' . $name;
-        if (!file_exists($filename)) {
-            move_uploaded_file($_FILES["prize-breakdown"]["tmp_name"], $filename);
+        if(mime_content_type($name) == "application/pdf"){
+            $filename = $uploads_dir . '/' . $name;
+            if (!file_exists($filename)) {
+                move_uploaded_file($_FILES["prize-breakdown"]["tmp_name"], $filename);
+            }
         }
     }
 
