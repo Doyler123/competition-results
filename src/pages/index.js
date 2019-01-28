@@ -5,7 +5,7 @@ import ResultsForm from '../components/results/ReaultsForm'
 import {Grid, Row, Col} from 'react-bootstrap'
 import axios from 'axios'
 
-import '../assets/constants.js'
+import * as Constants from '../assets/constants'
 
 class FileInput extends React.Component {
     
@@ -37,7 +37,7 @@ class FileInput extends React.Component {
             this.setState({...this.state, breakdownFile : file.name})
             var formData = new FormData();
             formData.append('prize-breakdown', file);
-            axios.post('http://localhost/weekend-results/src/assets/createHTML.php', formData)
+            axios.post(Constants.FILE_UPLOAD_URL, formData)
               .then(function (response) {
                 console.log(response);
               })

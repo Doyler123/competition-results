@@ -7,3 +7,5 @@ export const FORMAT_SUFFIXS = {
     "Medal" : "",
     "V-Par" : " Up"
 }
+
+export const FILE_UPLOAD_URL = "http://www.luttrellstowncastlegolfmembers.com/results/uploadFile.php";

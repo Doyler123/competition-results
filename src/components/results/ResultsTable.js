@@ -30,7 +30,6 @@ class ResultsTable extends React.Component {
         // let { compData, breakdownInfo } = this.props;
         let { compData, breakdownFile} = this.props;
 
-        console.log(compData)
         return compData && compData.length > 0 ? 
         <div className="table-editable" align="center" style={{ marginBottom : "15px" }}>
 
